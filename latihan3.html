@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Latihan 3</h1>
+    <p>Masukkan Password</p>
+   <form onsubmit="event.preventDefault(); hasilPerulangan();">
+    <label for="password">Password</label>
+    <input type="text" id="password" required>
+    <button type="submit">Enter</button>
+   </form>
+   <p id="pesan"></p>
+
+   <script>
+    function hasilPerulangan(){
+      
+        // let correctPassword = "javascript";
+        let password;
+
+        do{
+            password = document.getElementById("password").value;
+            if (password !== "javascript"){
+                document.getElementById("pesan").innerText = "Password Salah";
+                return;
+        }
+    }while  (password !== "javascript");
+    document.getElementById("pesan").innerText = "Login Berhasil";
+}
+   </script>
+</body>
+</html>

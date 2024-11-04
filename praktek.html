@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktek Java Script</title>
+</head>
+<body>
+    <h1>Perhitungan Luas Persegi</h1>
+    <form onsubmit="event.preventDefault(); ">
+        <label for="panjang">Panjang</label>
+        <input type="number" id="panjang" required></br>
+        <label for="lebar">Lebar</label>
+        <input type="number" id="lebar" required>
+    </form>
+    <button type="submit" onclick="luasPersegiPanjang();">Submit</button>
+    <p id="pesan"></p>
+
+    <script>
+        function luasPersegiPanjang(){
+          
+            const length = parseInt(document.getElementById("panjang").value);
+            const width = parseInt(document.getElementById("lebar").value);
+            const luas = length*width;
+            const keliling = 2*(length+width);
+           console.log("Luas = " + luas + " Keliling = " + keliling);
+            document.getElementById("pesan").innerText = "Luas persegi dengan panjang " + length + " dan lebar " + width + " = " + luas + " cm2. Keliling persegi dengan panjang " + length + " dan lebar " + width + " = " + keliling + " cm.";
+
+          
+        }
+    </script>
+</body>
+</html>

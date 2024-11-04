@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 4</title>
+</head>
+<body>
+    <h1>Latihan 4</h1>
+    <p>Masukkan Angka yang Anda Inginkan</p>
+   <form onsubmit="event.preventDefault(); hasilPerulangan();">
+    <label for="angka">Angka</label>
+    <input type="number" id="angka" required>
+    <button type="submit">Enter</button>
+   </form>
+   <p id="pesan"></p>
+
+   <script>
+
+    function hasilPerulangan(){
+        const number = parseInt(document.getElementById("angka").value);
+
+if (number > 0) {
+     document.getElementById("pesan").innerText = "Angka positif";
+ } else if (number < 0) {
+     document.getElementById("pesan").innerText = "Angka negatif";
+ } else {
+     document.getElementById("pesan").innerText = "Angka nol";
+ }
+
+    }
+       
+   </script>
+</body>
+</html>
